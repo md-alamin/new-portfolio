@@ -8,7 +8,7 @@ const Home = () => {
 	return (
 		<div
 			name="home"
-			className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-950 py-24"
+			className="w-full bg-gradient-to-b from-black via-black to-gray-950 pt-24"
 		>
 			<div className="max-w-5xl mx-auto px-4 flex flex-col md:flex-row justify-center items-center text-white h-full gap-10">
 				<div className="flex justify-center items-center h-full">
@@ -24,7 +24,7 @@ const Home = () => {
 						</p>
 
 						<div className="flex gap-6 justify-center">
-							<button className="flex gap-1 items-center px-2 py-1 text-lg bg-white hover:bg-transparent text-black hover:text-white rounded border-b-2 border-b-white hover:border-b-2 hover:border-red-400 duration-300 group cursor-pointer">
+							<button className="flex gap-1 items-center my-btn rounded group cursor-pointer">
 								Portfolio
 								<span className="group-hover:rotate-90 duration-300">
 									<HiArrowNarrowRight></HiArrowNarrowRight>
@@ -54,7 +54,7 @@ const Home = () => {
 								}}
 								target="_blank"
 								rel="noreferrer"
-								className="flex gap-1 items-center px-2 py-1 text-lg bg-white hover:bg-transparent text-black hover:text-white rounded border-b-2 border-b-white hover:border-b-2 hover:border-red-400 duration-300 group cursor-pointer"
+								className="flex gap-1 items-center my-btn rounded group cursor-pointer"
 							>
 								Resume
 								<span className="group-hover:animate-bounce duration-300">
@@ -68,6 +68,7 @@ const Home = () => {
 					<img
 						src={HeroImage}
 						alt=""
+						loading="lazy"
 						className="rounded-2xl w-2/3 md:w-full mx-auto"
 					/>
 				</div>

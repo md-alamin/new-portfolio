@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
+import { Link } from 'react-scroll';
 
 const Header = () => {
 	const [nav, setNav] = useState(false);
@@ -51,7 +52,7 @@ const Header = () => {
 	];
 
 	return (
-		<nav className="bg-black px-4 text-white fixed w-full">
+		<nav className="bg-black px-4 text-white fixed w-full z-10">
 			<div className="max-w-5xl mx-auto flex justify-between items-center h-20 ">
 				<div>
 					<h1 className="font-fancy text-4xl md:text-5xl">Alamin</h1>
@@ -62,7 +63,9 @@ const Header = () => {
 							key={id}
 							className="px-4 cursor-pointer text-gray-400 hover:text-gray-300 hover:scale-105 duration-200 capitalize font-medium"
 						>
-							{link}
+							<Link to={link} smooth duration={500}>
+								{link}
+							</Link>
 						</li>
 					))}
 				</ul>
@@ -79,7 +82,14 @@ const Header = () => {
 								key={id}
 								className="p-4 cursor-pointer capitalize text-2xl text-gray-400 hover:text-gray-300 hover:scale-105 duration-200 font-medium"
 							>
-								{link}
+								<Link
+									onClick={() => setNav(false)}
+									to={link}
+									smooth
+									duration={700}
+								>
+									{link}
+								</Link>
 							</li>
 						))}
 						<div className="flex gap-4 mt-4">
